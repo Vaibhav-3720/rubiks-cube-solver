@@ -2,10 +2,6 @@
 
 #include "RubiksCube.h"
 
-int main()
-{
-    return 0;
-}
 // Given a color return it's first letter
 char RubiksCube::getColorLetter(COLOR color)
 {
