@@ -38,7 +38,7 @@ int main()
     // cube2.uPrime();
     // cube2.print();
 
-    IDDFSSolver solver(cube1, 8);
+    IDDFSSolver solver(cube1, 6);
 
     vector<RubiksCube::MOVE> solution = solver.solve();
 
