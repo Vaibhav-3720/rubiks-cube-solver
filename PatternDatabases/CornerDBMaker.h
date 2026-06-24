@@ -5,7 +5,8 @@
 
 using namespace std;
 
-class CornerDBMaker {
+class CornerDBMaker
+{
 private:
     string fileName;
     CornerPatternDatabase cornerDB;
@@ -17,5 +18,4 @@ public:
     bool bfsAndStore();
 };
 
-
-#endif //RUBIKS_CUBE_SOLVER_CORNERDBMAKER_H
+#endif // RUBIKS_CUBE_SOLVER_CORNERDBMAKER_H

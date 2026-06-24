@@ -15,5 +15,7 @@ uint32_t pick(uint32_t n, uint32_t k)
 // Calculate nCk: n!/((n-k)!*k!).
 uint32_t choose(uint32_t n, uint32_t k)
 {
-    return (n < k)? 0 : factorial(n) / (factorial(n - k) * factorial(k));
+    return (n < k)
+               ? 0
+               : factorial(n) / (factorial(n - k) * factorial(k));
 }

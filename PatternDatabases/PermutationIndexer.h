@@ -36,7 +36,7 @@ public:
      * Calculate the lexicographic rank (the index) of a permutation in O(n)
      * complexity.
      */
-    uint32_t rank(const array<uint8_t, K>& perm) const
+    uint32_t rank(const array<uint8_t, K> &perm) const
     {
         // This will hold the Lehmer code (in a factorial number system).
         array<uint32_t, K> lehmer;
@@ -72,4 +72,4 @@ public:
     }
 };
 
-#endif //RUBIKS_CUBE_SOLVER_PERMUTATIONINDEXER_H
+#endif // RUBIKS_CUBE_SOLVER_PERMUTATIONINDEXER_H

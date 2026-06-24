@@ -6,7 +6,8 @@
 #include "PermutationIndexer.h"
 using namespace std;
 
-class CornerPatternDatabase : public PatternDatabase {
+class CornerPatternDatabase : public PatternDatabase
+{
 
     typedef RubiksCube::FACE F;
 
@@ -15,9 +16,7 @@ class CornerPatternDatabase : public PatternDatabase {
 public:
     CornerPatternDatabase();
     CornerPatternDatabase(uint8_t init_val);
-    uint32_t getDatabaseIndex(const RubiksCube& cube) const;
-
+    uint32_t getDatabaseIndex(const RubiksCube &cube) const;
 };
 
-
-#endif //RUBIKS_CUBE_SOLVER_CORNERPATTERNDATABASE_H
+#endif // RUBIKS_CUBE_SOLVER_CORNERPATTERNDATABASE_H
