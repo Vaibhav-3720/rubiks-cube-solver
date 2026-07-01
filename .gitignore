@@ -1,0 +1,67 @@
+# ==========================
+# Build directories
+# ==========================
+build/
+cmake-build-debug/
+cmake-build-release/
+out/
+
+# ==========================
+# CMake generated files
+# ==========================
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+compile_commands.json
+CTestTestfile.cmake
+Testing/
+install_manifest.txt
+
+# ==========================
+# Executables
+# ==========================
+RubiksCubeSolver
+*.exe
+*.out
+*.app
+
+# ==========================
+# Object files
+# ==========================
+*.o
+*.obj
+*.so
+*.a
+*.lib
+*.dll
+*.dylib
+
+# ==========================
+# macOS
+# ==========================
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ==========================
+# VS Code
+# ==========================
+.vscode/
+
+# ==========================
+# CLion
+# ==========================
+.idea/
+
+# ==========================
+# Logs
+# ==========================
+*.log
+
+# ==========================
+# Pattern Database Files
+# (if generated locally)
+# ==========================
+*.db
+*.bin
