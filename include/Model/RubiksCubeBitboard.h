@@ -35,6 +35,7 @@ private:
 
 public:
     RubiksCubeBitboard();
+    RubiksCubeBitboard(const RubiksCubeBitboard &other) = default;
 
     // Cube State
     COLOR getColor(FACE face, unsigned row, unsigned col) const override;

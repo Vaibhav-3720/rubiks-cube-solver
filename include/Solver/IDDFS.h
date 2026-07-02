@@ -18,4 +18,5 @@ public:
     IDDFS(const RubiksCube3dArray &cube, int maxDepth);
 
     std::vector<RubiksCube::MOVE> solve();
+    const RubiksCube3dArray& getCube() const;
 };

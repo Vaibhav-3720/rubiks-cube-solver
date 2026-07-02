@@ -218,15 +218,25 @@ void RubiksCube::print() const
 
 std::vector<RubiksCube::MOVE> RubiksCube::randomShuffleCube(unsigned int moves)
 {
-    std::vector<MOVE> moves_performed;
-    srand(time(0));
-    for (unsigned int i = 0; i < moves; i++)
+    std::vector<MOVE> performed;
+
+    int lastFace = -1;
+
+    while (performed.size() < moves)
     {
-        unsigned int selectMove = (rand() % 18);
-        moves_performed.push_back(static_cast<MOVE>(selectMove));
-        this->move(static_cast<MOVE>(selectMove));
+        int move = rand() % 18;
+        int face = move / 3;
+
+        if (face == lastFace)
+            continue;
+
+        lastFace = face;
+
+        performed.push_back((MOVE)move);
+        this->move((MOVE)move);
     }
-    return moves_performed;
+
+    return performed;
 }
 
 // Helper function returns string of corner

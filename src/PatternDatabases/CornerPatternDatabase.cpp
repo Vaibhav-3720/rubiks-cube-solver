@@ -4,13 +4,20 @@
 // Constructors
 //-------------------------------------
 
+// 8! permutations x 3^7 independent corner orientations = 88,179,840
+// distinct reachable corner states.
+namespace
+{
+    constexpr std::size_t kCornerDatabaseSize = 88179840;
+}
+
 CornerPatternDatabase::CornerPatternDatabase()
-    : PatternDatabase(100179840)
+    : PatternDatabase(kCornerDatabaseSize)
 {
 }
 
 CornerPatternDatabase::CornerPatternDatabase(uint8_t initialValue)
-    : PatternDatabase(100179840, initialValue)
+    : PatternDatabase(kCornerDatabaseSize, initialValue)
 {
 }
 

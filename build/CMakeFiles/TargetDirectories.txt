@@ -1,0 +1,5 @@
+/Users/vaibhavgupt/Desktop/Rubik's cube solver 2/build/CMakeFiles/rubiks_cube_lib.dir
+/Users/vaibhavgupt/Desktop/Rubik's cube solver 2/build/CMakeFiles/RubiksCubeSolver.dir
+/Users/vaibhavgupt/Desktop/Rubik's cube solver 2/build/CMakeFiles/generate_corner_db.dir
+/Users/vaibhavgupt/Desktop/Rubik's cube solver 2/build/CMakeFiles/edit_cache.dir
+/Users/vaibhavgupt/Desktop/Rubik's cube solver 2/build/CMakeFiles/rebuild_cache.dir

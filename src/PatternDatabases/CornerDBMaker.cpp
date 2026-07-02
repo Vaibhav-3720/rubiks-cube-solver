@@ -25,6 +25,16 @@ CornerDBMaker::CornerDBMaker(const std::string &fileName,
 
 bool CornerDBMaker::bfsAndStore()
 {
+    // A full breadth-first exploration of the corner state space (up to
+    // depth 11) requires holding tens of millions of cube objects in the
+    // BFS frontier simultaneously, which comfortably exceeds a few GB of
+    // RAM. Capping at depth 8 covers ~31% of all reachable corner states
+    // (the states most likely to be encountered early in a solve) while
+    // keeping generation fast and memory-bounded. States beyond this
+    // depth still get a safe (if less informative) heuristic value from
+    // PatternDatabase's sentinel "unknown" entries.
+    constexpr int kMaxDepth = 8;
+
     RubiksCubeBitboard cube;
 
     std::queue<RubiksCubeBitboard> queue;
@@ -45,7 +55,7 @@ bool CornerDBMaker::bfsAndStore()
                   << levelSize
                   << '\n';
 
-        if (currentDepth == 9)
+        if (currentDepth > kMaxDepth)
         {
             break;
         }

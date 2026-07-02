@@ -23,4 +23,5 @@ public:
     explicit BFS(const RubiksCube3dArray &cube);
 
     std::vector<RubiksCube::MOVE> solve();
+    const RubiksCube3dArray& getCube() const;
 };

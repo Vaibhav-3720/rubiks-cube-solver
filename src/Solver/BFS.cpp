@@ -81,3 +81,7 @@ std::vector<RubiksCube::MOVE> BFS::solve()
 
     return moves;
 }
+const RubiksCube3dArray& BFS::getCube() const
+{
+    return rubiksCube;
+}

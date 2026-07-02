@@ -273,11 +273,17 @@ RubiksCube &RubiksCubeBitboard::r()
 
     rotateSide(0, 2, 3, 4, 2, 2, 3, 4);
     rotateSide(2, 2, 3, 4, 5, 2, 3, 4);
-    rotateSide(5, 2, 3, 4, 4, 7, 6, 0);
+    rotateSide(5, 2, 3, 4, 4, 6, 7, 0);
 
-    bitboard[4] = (bitboard[4] & ~(one_8 << (8 * 0))) | (clr1 << (8 * 0));
+    // NOTE: destination indices here must mirror the (6, 7, 0) read order
+    // used above when DOWN was populated from BACK, otherwise the 12
+    // affected stickers form a single 12-cycle instead of three
+    // independent 4-cycles, silently corrupting the cube on any sequence
+    // that mixes R with another face turn. Mapping verified against the
+    // RubiksCube3dArray reference implementation.
+    bitboard[4] = (bitboard[4] & ~(one_8 << (8 * 6))) | (clr1 << (8 * 6));
     bitboard[4] = (bitboard[4] & ~(one_8 << (8 * 7))) | (clr2 << (8 * 7));
-    bitboard[4] = (bitboard[4] & ~(one_8 << (8 * 6))) | (clr3 << (8 * 6));
+    bitboard[4] = (bitboard[4] & ~(one_8 << (8 * 0))) | (clr3 << (8 * 0));
 
     return *this;
 }

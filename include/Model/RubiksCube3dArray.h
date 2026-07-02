@@ -12,6 +12,7 @@ private:
 
 public:
     RubiksCube3dArray();
+    RubiksCube3dArray(const RubiksCube3dArray &other) = default;
 
     COLOR getColor(FACE face, unsigned row, unsigned col) const override;
     bool isSolved() const override;

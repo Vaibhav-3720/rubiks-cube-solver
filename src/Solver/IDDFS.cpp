@@ -35,3 +35,7 @@ std::vector<RubiksCube::MOVE> IDDFS::solve()
 
     return {};
 }
+const RubiksCube3dArray& IDDFS::getCube() const
+{
+    return rubiksCube;
+}
